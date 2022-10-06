@@ -19,4 +19,33 @@ body {
   width: 70rem;
   aspect-ratio: 1;
   background: url(images/bg.png);
+  position: relative;
+}
+
+/* Shapes */
+.block {
+  width: 18rem;
+  aspect-ratio: 1;
+  background-color: rgb(51, 184, 184);
+  position: absolute;
+}
+
+.block-1 {
+  top: 16rem;
+  right: 44rem;
+}
+
+.block-2 {
+  top: 16rem;
+  right: 8rem;
+}
+
+.ball {
+  width: 12rem;
+  aspect-ratio: 1;
+  background-color: rgb(255, 118, 118);
+  border-radius: 50%;
+  position: absolute;
+  left: 29rem;
+  top: 22rem;
 }
