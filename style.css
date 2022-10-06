@@ -20,6 +20,7 @@ body {
   aspect-ratio: 1;
   background: url(images/bg.png);
   position: relative;
+  overflow: hidden;
 }
 
 /* Shapes */
@@ -33,11 +34,61 @@ body {
 .block-1 {
   top: 16rem;
   right: 44rem;
+  transform-origin: bottom right;
+  animation: block1Anim 5s infinite linear;
+}
+
+@keyframes block1Anim {
+  0% {
+    transform: translateY(-38rem) rotateZ(0);
+    opacity: 0.5;
+  }
+
+  30% {
+    transform: translateY(0) rotateZ(0);
+  }
+
+  40%,
+  45% {
+    transform: translateY(0) rotateZ(-180deg);
+    opacity: 1;
+  }
+
+  55%,
+  100% {
+    transform: translateY(38rem) rotateZ(-180deg);
+    opacity: 0.5;
+  }
 }
 
 .block-2 {
   top: 16rem;
   right: 8rem;
+  transform-origin: bottom left;
+  animation: block2Anim 5s -2.5s infinite linear;
+}
+
+@keyframes block2Anim {
+  0% {
+    transform: translateY(-38rem) rotateZ(0);
+    opacity: 0.5;
+  }
+
+  30% {
+    transform: translateY(0) rotateZ(0);
+  }
+
+  40%,
+  45% {
+    transform: translateY(0) rotateZ(180deg);
+    opacity: 1;
+  }
+
+  55%,
+  100% {
+    transform: translateY(38rem) rotateZ(180deg);
+    opacity: 0.5;
+  }
 }
 
 .ball {
@@ -48,4 +99,7 @@ body {
   position: absolute;
   left: 29rem;
   top: 22rem;
+}
+
+@keyframes ballAnim {
 }
