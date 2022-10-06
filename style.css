@@ -18,17 +18,30 @@ body {
 .wrapper {
   width: 70rem;
   aspect-ratio: 1;
-  background: url(images/bg.png);
+  background-image: url(images/bg.png);
+  background-size: auto 70rem;
+  background-repeat: repeat-y;
   position: relative;
   overflow: hidden;
+  animation: bgAnim 5s infinite linear;
 }
 
-/* Shapes */
+@keyframes bgAnim {
+  0% {
+    background-position: center 0;
+  }
+
+  100% {
+    background-position: center 70rem;
+  }
+}
+
 .block {
   width: 18rem;
   aspect-ratio: 1;
   background-color: rgb(51, 184, 184);
   position: absolute;
+  box-shadow: 0.2rem 0.2rem 0.4rem #aaa inset, -0.2rem -0.2rem 0.4rem #aaa inset;
 }
 
 .block-1 {
@@ -99,7 +112,27 @@ body {
   position: absolute;
   left: 29rem;
   top: 22rem;
+  animation: ballAnim 2.5s -1.5s infinite linear;
 }
 
 @keyframes ballAnim {
+  0% {
+    transform: translateY(-20rem) scale(0.8, 1);
+  }
+
+  45% {
+    transform: translateY(0) scale(0.9, 1);
+  }
+
+  50% {
+    transform: translateY(2rem) scale(1, 0.7);
+  }
+
+  60% {
+    transform: translateY(-10rem) scale(0.9, 1);
+  }
+
+  100% {
+    transform: translateY(-20rem) scale(0.8, 1);
+  }
 }
